@@ -83,8 +83,8 @@ class View:
             ft.Divider(),
 
             # Sezione 3
-            ft.Text("Strumenti", size=20, weight=ft.FontWeight.BOLD),
-            pulsante_mostra,
+            ft.Row([ft.Text("Strumenti", size=20, weight=ft.FontWeight.BOLD)], alignment=ft.MainAxisAlignment.START),
+            ft.Row([pulsante_mostra], alignment=ft.MainAxisAlignment.START),
             ft.Container(
                 content=self.lista_strumenti,
                 height=200,  # Altezza fissa per creare un'area di scorrimento ordinata
@@ -95,7 +95,7 @@ class View:
             ft.Text("Cerca Strumento per Tipo", size=20, weight=ft.FontWeight.BOLD),
             ft.Row(spacing=20,
                    controls=[self.input_tipo_strumento, pulsante_cerca],
-                   alignment=ft.MainAxisAlignment.CENTER),
+                   alignment=ft.MainAxisAlignment.START),
             ft.Container(
                 content=self.lista_strumenti_ricerca,
                 height=200,
